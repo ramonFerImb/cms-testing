@@ -6,14 +6,15 @@ import { useTranslate } from "../utils/useTranslate";
 
 export const IndexPageTemplate = ({ lang, carrousel, about }) => (
   <div>
-    {carrousel.map((item) => (
-      <div>
-        <span>{item.title}</span>
-        <span>{item.subtitle}</span>
-        <img src={item.image}></img>
-        <button>{item.button}</button>
-      </div>
-    ))}
+    {carrousel &&
+      carrousel.map((item) => (
+        <div>
+          <span>{item.title}</span>
+          <span>{item.subtitle}</span>
+          <img src={item.image}></img>
+          <button>{item.button}</button>
+        </div>
+      ))}
     <span>{about.sectionTitle}</span>
     <span>{about.title}</span>
     <span>{about.content}</span>
