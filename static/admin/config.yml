@@ -18,7 +18,7 @@ collections:
     create: true
     slug: "{{fields.id}}.{{fields.lang}}"
     fields:
-      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post" }
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page" }
       - { label: "Id", name: "id", widget: "hidden", default: "home" }
       - { label: "Data", name: "data", widget: "hidden", default: "true" }
       - { label: "Language", name: "lang", widget: string }
