@@ -4,7 +4,22 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import { useTranslate } from "../utils/useTranslate";
 
-export const IndexPageTemplate = ({ data }) => <div>{data.lang}</div>;
+export const IndexPageTemplate = ({ lang, carrousel, about }) => (
+  <div>
+    {carrousel.map((item) => (
+      <div>
+        <span>{item.title}</span>
+        <span>{item.subtitle}</span>
+        <img src={item.image}></img>
+        <button>{item.button}</button>
+      </div>
+    ))}
+    <span>{about.sectionTitle}</span>
+    <span>{about.title}</span>
+    <span>{about.content}</span>
+    <button>{about.button}</button>
+  </div>
+);
 
 const IndexPage = ({ data }) => {
   const { t, locale } = useTranslate();
@@ -14,7 +29,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <IndexPageTemplate data={filteredData} />
+      <IndexPageTemplate {...filteredData} />
     </Layout>
   );
 };
@@ -28,6 +43,18 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             lang
+            carrousel {
+              image
+              title
+              subtitle
+              button
+            }
+            about {
+              sectionTitle
+              title
+              content
+              button
+            }
           }
         }
       }
