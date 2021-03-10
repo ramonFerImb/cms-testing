@@ -15,10 +15,14 @@ export const IndexPageTemplate = ({ lang, carrousel, about }) => (
           <button>{item.button}</button>
         </div>
       ))}
-    <span>{about.sectionTitle}</span>
-    <span>{about.title}</span>
-    <span>{about.content}</span>
-    <button>{about.button}</button>
+    {about && (
+      <>
+        <span>{about.sectionTitle}</span>
+        <span>{about.title}</span>
+        <span>{about.content}</span>
+        <button>{about.button}</button>
+      </>
+    )}
   </div>
 );
 
@@ -26,7 +30,7 @@ const IndexPage = ({ data }) => {
   const { t, locale } = useTranslate();
   const filteredData = data.allMarkdownRemark.edges.find((edge) => edge.node.frontmatter.lang === locale).node.frontmatter;
 
-  console.log(filteredData);
+  // console.log(filteredData);
 
   return (
     <Layout>
