@@ -6,7 +6,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(["data"]).toJS();
 
   if (data) {
-    return <IndexPageTemplate lang={data.lang} carrousel={data.carrousel || []} carrousel={data.about || {}} />;
+    return <IndexPageTemplate lang={data.lang} carrousel={data.carrousel || []} carrousel={data.about || { sectionTitle: "test" }} />;
   } else {
     return <div>Loading...</div>;
   }
