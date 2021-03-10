@@ -27,6 +27,7 @@ collections:
           widget: list,
           fields:
             [
+              { label: "Background Image", name: image, widget: image },
               { label: "Title", name: "title", widget: "string", default: "test" },
               { label: "Subtitle", name: "subtitle", widget: text, default: "test" },
               { label: "button", name: "button", widget: "string", default: "test" },
