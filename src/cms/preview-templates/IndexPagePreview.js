@@ -2,12 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { IndexPageTemplate } from "../../templates/index-page";
 
-const IndexPagePreview = (props, { entry, getAsset }) => {
-  const carrousel = entry.getIn(["data", "carrousel"]).toJS();
-  const about = entry.getIn(["data", "about"]).toJS();
-  const lang = entry.getIn(["data", "lang"]).toJS();
-  console.log(props);
-
+const IndexPagePreview = ({ entry, getAsset }) => {
+  const data = entry.getIn(["data"]).toJS();
+  console.log(data);
   return <div>This is a test</div>;
   // return <IndexPageTemplate lang={lang} carrousel={carrousel || []} carrousel={about} />;
 };
