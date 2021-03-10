@@ -16,11 +16,12 @@ collections:
     label: "Home"
     folder: "src/pages"
     create: true
-    slug: "{{id}}.{{lang}}"
+    slug: "{{fields.id}}.{{fields.lang}}"
     fields:
       - { label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post" }
       - { label: "Id", name: "id", widget: "hidden", default: "home" }
       - { label: "Data", name: "data", widget: "hidden", default: "true" }
+      - { label: "Language", name: "lang", widget: string }
       - {
           label: "Carrousel",
           name: "carrousel",
@@ -33,6 +34,19 @@ collections:
               { label: "button", name: "button", widget: "string", default: "test" },
             ],
         }
+      - {
+          label: About,
+          name: about,
+          widget: object,
+          fields:
+            [
+              { label: Image, name: image, widget: image },
+              { label: Title, name: title, widget: string, default: About Title },
+              { label: Description, name: description, widget: text, default: Lorem ipsum dolor sit amet, consect etur adipiscing elit. },
+              { label: Button, name: button, widget: string, default: button },
+            ],
+        }
+
   # - name: "blog"
   #   label: "Blog"
   #   folder: "src/pages/blog"
