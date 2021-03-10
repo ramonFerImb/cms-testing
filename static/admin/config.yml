@@ -16,7 +16,7 @@ collections:
     label: "Home"
     folder: "src/pages"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{id}}.{{lang}}"
     fields:
       - { label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post" }
       - { label: "Id", name: "id", widget: "hidden", default: "home" }
@@ -24,12 +24,12 @@ collections:
       - {
           label: "Carrousel",
           name: "carrousel",
-          widget: object,
+          widget: list,
           fields:
             [
-              { label: "image", name: "image", widget: "string", default: "test" },
+              { label: "image", name: "image", widget: image, default: "test" },
               { label: "title", name: "title", widget: "string", default: "test" },
-              { label: "subtitle", name: "subtitle", widget: "string", default: "test" },
+              { label: "subtitle", name: "subtitle", widget: text, default: "test" },
               { label: "button", name: "button", widget: "string", default: "test" },
             ],
         }
