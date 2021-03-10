@@ -17,16 +17,22 @@ collections:
     folder: "src/pages"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields: 
+    fields:
       - { label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post" }
       - { label: "Id", name: "id", widget: "hidden", default: "home" }
       - { label: "Data", name: "data", widget: "hidden", default: "true" }
-      - { label: "Carrousel", name: "carrousel", widget: object, fields: [
-          {label: "image", name: "image", widget: "string", default: "test"}
-          {label: "title", name: "title", widget: "string", default: "test"}
-          {label: "subtitle", name: "subtitle", widget: "string", default: "test"}
-          {label: "button", name: "button", widget: "string", default: "test"}
-        ]}
+      - {
+          label: "Carrousel",
+          name: "carrousel",
+          widget: object,
+          fields:
+            [
+              { label: "image", name: "image", widget: "string", default: "test" },
+              { label: "title", name: "title", widget: "string", default: "test" },
+              { label: "subtitle", name: "subtitle", widget: "string", default: "test" },
+              { label: "button", name: "button", widget: "string", default: "test" },
+            ],
+        }
   # - name: "blog"
   #   label: "Blog"
   #   folder: "src/pages/blog"
