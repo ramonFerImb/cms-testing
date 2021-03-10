@@ -72,6 +72,19 @@ module.exports = {
         purgeOnly: ["/all.sass"], // applies purging only on the bulma css file
       },
     }, // must be after other CSS plugins
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        // Directory with the strings JSON
+        path: `${__dirname}/src/intl`,
+        // Supported languages
+        languages: [`es`, `en`],
+        // Default site language
+        defaultLanguage: `es`,
+        // Redirects to `/es` in the route `/`
+        redirect: false,
+      },
+    },
     "gatsby-plugin-netlify", // make sure to keep it last in the array
   ],
 };
