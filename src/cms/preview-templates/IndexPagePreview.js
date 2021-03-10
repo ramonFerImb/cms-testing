@@ -3,10 +3,12 @@ import PropTypes from "prop-types";
 import { IndexPageTemplate } from "../../templates/index-page";
 
 const IndexPagePreview = ({ entry, getAsset }) => {
-  const data = entry.getIn(["data"]).toJS();
+  const carrousel = entry.getIn(["data", "carrousel"]).toJS();
+  const about = entry.getIn(["data", "about"]).toJS();
+  const lang = entry.getIn(["data", "lang"]).toJS();
 
-  if (data) {
-    return <IndexPageTemplate lang={data.lang} carrousel={data.carrousel || []} carrousel={data.about || { sectionTitle: "test" }} />;
+  if ((carrousel, about, lang)) {
+    return <IndexPageTemplate lang={lang} carrousel={carrousel || []} carrousel={about} />;
   } else {
     return <div>Loading...</div>;
   }
