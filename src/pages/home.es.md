@@ -2,6 +2,7 @@
 data: true
 id: home
 lang: es
+templateKey: index-page
 title: Pagina inicio
 image: /img/default-fallback-image.png
 carrousel:

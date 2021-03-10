@@ -7,11 +7,8 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   const about = entry.getIn(["data", "about"]).toJS();
   const lang = entry.getIn(["data", "lang"]).toJS();
 
-  if ((carrousel, about, lang)) {
-    return <IndexPageTemplate lang={lang} carrousel={carrousel || []} carrousel={about} />;
-  } else {
-    return <div>Loading...</div>;
-  }
+  return <div>This is a test</div>;
+  // return <IndexPageTemplate lang={lang} carrousel={carrousel || []} carrousel={about} />;
 };
 
 IndexPagePreview.propTypes = {

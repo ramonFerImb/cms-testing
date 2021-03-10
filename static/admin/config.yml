@@ -12,10 +12,11 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "home"
+  - name: "index"
     label: "Home"
     folder: "src/pages"
     create: true
+    filter: {field: data, value: true}
     slug: "{{fields.id}}.{{fields.lang}}"
     fields:
       - { label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page" }
