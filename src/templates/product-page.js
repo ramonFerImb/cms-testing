@@ -29,12 +29,12 @@ ProductPage.propTypes = {
 
 export default ProductPage;
 
-export const productPageQuery = graphql`
-  query ProductPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      frontmatter {
-        title
-      }
-    }
-  }
-`;
+// export const productPageQuery = graphql`
+//   query ProductPage($id: String!) {
+//     markdownRemark(id: { eq: $id }) {
+//       frontmatter {
+//         title
+//       }
+//     }
+//   }
+// `;
