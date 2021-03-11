@@ -22,7 +22,7 @@ carrousel:
 about:
   sectionTitle: Sobre nosotros
   title: Características principales de HDC
-  content: Lorem ipsum dolor sit amet, consect etur adipiscing elit. Lorem ipsum dolor sit am et, consectetur adipiscing elit. Lorem ip sum dolor sit a met, consectetur adipisci ng elit.
+  description: Lorem ipsum dolor sit amet, consect etur adipiscing elit. Lorem ipsum dolor sit am et, consectetur adipiscing elit. Lorem ip sum dolor sit a met, consectetur adipisci ng elit.
   button: Seguir leyendo
   image: /img/default-fallback-image.png
 productsSection:

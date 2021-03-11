@@ -31,7 +31,7 @@ export const IndexPageTemplate = ({ lang, carrousel, about, productsSection, cer
         <div className={classes.aboutCard}>
           <div className={classes.aboutContent}>
             <div className={classes.title}>{about.title}</div>
-            <div className={classes.content}>{about.content}</div>
+            <div className={classes.content}>{about.description}</div>
             <Button type="primary">{about.button}</Button>
           </div>
           <img src={about.image} />
@@ -48,7 +48,7 @@ export const IndexPageTemplate = ({ lang, carrousel, about, productsSection, cer
       </Section>
     )}
     {certificationsSection && (
-      <Section className={classes.certificationContainer} image={certificationsSection.bgImage} title="CERTIFICACIONES">
+      <Section className={classes.certificationContainer} image={certificationsSection.bgImage} title={certificationsSection.sectionTitle}>
         <div className={classes.cardsContainer}>
           {certificationsSection.certifications.map((certification, i) => {
             return <Card key={i} type="tertiary" {...certification} />;
@@ -105,7 +105,7 @@ export const pageQuery = graphql`
               image
               sectionTitle
               title
-              content
+              description
               button
             }
             productsSection {
@@ -118,7 +118,6 @@ export const pageQuery = graphql`
             }
             certificationsSection {
               sectionTitle
-              bgImage
               certifications {
                 image
                 title

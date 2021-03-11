@@ -64,7 +64,8 @@
   width: 100%;
   min-height: 38.6rem;
   display: grid;
-  grid-template-columns: 7fr 5.25fr;
+  grid-template-columns: 4fr 4fr;
+  place-items: center;
   img {
     width: 100%;
     height: auto;
@@ -109,15 +110,18 @@
 
 .certificationContainer {
   .cardsContainer {
-    @media (min-width: $bpS) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media (min-width: $bpM) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    @media (min-width: $bpL) {
-      grid-template-columns: repeat(4, 1fr);
-    }
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    // @media (min-width: $bpS) {
+    //   grid-template-columns: repeat(2, 1fr);
+    // }
+    // @media (min-width: $bpM) {
+    //   grid-template-columns: repeat(3, 1fr);
+    // }
+    // @media (min-width: $bpL) {
+    //   grid-auto-flow: column;
+    //   grid-auto-columns: 1fr;
+    // }
   }
 }
 
@@ -133,8 +137,9 @@
 .products-container {
   background: $primary;
   .cardsContainer {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.3rem;
 
     .secondary {
       margin-right: 2rem;
