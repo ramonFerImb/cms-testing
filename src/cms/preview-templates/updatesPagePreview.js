@@ -3,7 +3,6 @@ import { UpdatesPageTemplate } from "../../templates/updates-page";
 
 const UpdatesPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(["data"]).toJS();
-  console.log(data);
   return (
     <UpdatesPageTemplate
       templateKey={data.templateKey}
