@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { UpdatesPageTemplate } from "../../templates/updates-page";
 
 const UpdatesPagePreview = ({ entry, getAsset }) => {
