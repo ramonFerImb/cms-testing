@@ -122,17 +122,17 @@ collections:
       - { label: Id, name: id, widget: hidden, default: updates }
       - { label: Data, name: data, widget: hidden, default: true }
       - { label: Language, name: lang, widget: string }
-      # - {
-      #     label: Carrousel,
-      #     name: carruselSection,
-      #     widget: list,
-      #     fields:
-      #       [
-      #         { label: title, name: title, widget: string, default: test },
-      #         { label: subtitle, name: subtitle, widget: string, default: test },
-      #         { label: Carrousel Images, name: images, widget: list, fields: [{ label: Image, name: image, widget: image }] },
-      #       ],
-      #   }
+      - {
+          label: Carrousel,
+          name: carruselSection,
+          widget: list,
+          fields:
+            [
+              { label: title, name: title, widget: string, default: test },
+              { label: subtitle, name: subtitle, widget: string, default: test },
+              { label: Carrousel Images, name: images, widget: list, fields: [{ label: Image, name: image, widget: image }] },
+            ],
+        }
       # - {
       #     label: Updates Section,
       #     name: updatesSection,
