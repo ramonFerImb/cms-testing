@@ -1,12 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { useTranslate } from "../utils/useTranslate";
-import { Layout, Section, Carrousel, Button, Card } from "./../components";
+import { Layout, Section, Carrousel, Card } from "./../components";
 
 import classes from "./about.module.scss";
 
-export const AboutPageTemplate = ({ section1, section2, section3, aboutSection }) => {
+export const AboutPageTemplate = ({ section1, section2, section3, section4, section5, section6, section7, section8, aboutSection }) => {
   return (
     <>
       <Section className={classes.carrouselContainer}>
@@ -41,6 +40,77 @@ export const AboutPageTemplate = ({ section1, section2, section3, aboutSection }
             return <Card key={i} type="long" {...update} />;
           })}
         </div>
+      </Section>
+      <Section title="apartado 4" className={classes.section4container} type="secondary">
+        <div className={classes.galleryContainer}>
+          {section4.images.map((gallery, i) => {
+            return (
+              <img key={i} src={gallery.image} alt="imagen" />              
+            );
+          })}
+        </div>
+      </Section>
+      <Section title="apartado 5" className={classes.section5container}>
+        <p>{section5.content}</p>
+      </Section>
+      <Section className={classes.section6container}>
+        <p>{section6.title}</p>
+        <div className={classes.cardsContainer}>
+          {section6.cards.map((card, i) => {
+            return <Card key={i} type="tertiary" {...card} />;
+          })}
+        </div>
+      </Section>
+      <Section className={classes.section7container}>
+        <p>{section7.title}</p>
+        <div className={classes.cardsContainer}>
+          {section7.cards.map((card, i) => {
+            return <Card key={i} type="tertiary" {...card} />;
+          })}
+        </div>
+      </Section>
+      <Section title="Apartado 8" className={classes.section8container}>
+        <p>{section8.content}</p>
+        <div className={classes.tableContainer}>
+          <table>
+            <tr>
+              <th>Company</th>
+              <th>Contact</th>
+              <th>Country</th>
+            </tr>
+            <tr>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+            </tr>
+            <tr>
+              <td>Centro comercial Moctezuma</td>
+              <td>Francisco Chang</td>
+              <td>Mexico</td>
+            </tr>
+            <tr>
+              <td>Ernst Handel</td>
+              <td>Roland Mendel</td>
+              <td>Austria</td>
+            </tr>
+            <tr>
+              <td>Island Trading</td>
+              <td>Helen Bennett</td>
+              <td>UK</td>
+            </tr>
+            <tr>
+              <td>Laughing Bacchus Winecellars</td>
+              <td>Yoshi Tannamuri</td>
+              <td>Canada</td>
+            </tr>
+            <tr>
+              <td>Magazzini Alimentari Riuniti</td>
+              <td>Giovanni Rovelli</td>
+              <td>Italy</td>
+            </tr>
+          </table>
+        </div>
+        
       </Section>
     </>
   );
@@ -91,6 +161,31 @@ export const aboutPageQuery = graphql`
                 image
                 subtitle
               }
+            }
+            section4 {
+              images {
+                image
+              }
+            }
+            section5 {
+              content
+            }
+            section6 {
+              title
+              cards {
+                image
+                subtitle
+              }
+            }
+            section7 {
+              title
+              cards {
+                image
+                subtitle
+              }
+            }
+            section8 {
+              content
             }
           }
         }

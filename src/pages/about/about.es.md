@@ -30,6 +30,38 @@ section3:
       subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint Occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint Occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     - image: /img/default-fallback-image.png
       subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint Occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint Occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+section4:
+  images:
+    - image: /img/default-fallback-image.png
+    - image: /img/default-fallback-image.png
+    - image: /img/default-fallback-image.png
+    - image: /img/default-fallback-image.png
+section5:
+  content: everis Tactical HDC es un producto completo que ofrece de base las capacidades de cómputo, almacenamiento, red y seguridad de un Datacenter moderno mediante la integración de un software de virtualización que permitirá desplegar en este sistema, cualquier software estándar o aplicación propietaria que esté desarrollada sobre plataformas estándar x86.
+section6:
+  title: Funciones de Almacenamiento Integradas
+  cards:
+    - image: /img/default-fallback-image.png
+      subtitle: Compresión
+    - image: /img/default-fallback-image.png
+      subtitle: Deduplicación
+section7:
+  title: Funciones de Red y Seguridad Integradas
+  cards:
+    - image: /img/default-fallback-image.png
+      subtitle: Switching
+    - image: /img/default-fallback-image.png
+      subtitle: Routing
+    - image: /img/default-fallback-image.png
+      subtitle: Balanceo
+    - image: /img/default-fallback-image.png
+      subtitle: VLAN Bridge
+    - image: /img/default-fallback-image.png
+      subtitle: Monitor
+    - image: /img/default-fallback-image.png
+      subtitle: Firewall
+section8:
+  content: everis Tactical HDC ofrece una serie de beneficios en escenarios de despliegue rápido que ningún otro producto del mercado es capaz de conseguir.
 aboutSection:
   title: Características principales de HDC
   content: Lorem ipsum dolor sit amet, consect etur adipiscing elit. Lorem ipsum dolor sit am et, consectetur adipiscing elit. Lorem ip sum dolor sit a met, consectetur adipisci ng elit.
