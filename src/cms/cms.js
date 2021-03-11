@@ -2,8 +2,8 @@ import CMS from "netlify-cms-app";
 import uploadcare from "netlify-cms-media-library-uploadcare";
 import cloudinary from "netlify-cms-media-library-cloudinary";
 
-import IndexPagePreview from "./preview-templates/indexPagePreview";
-import UpdatesPagePreview from "./preview-templates/updatesPagePreview";
+import IndexPagePreview from "./preview-templates/IndexPagePreview";
+import UpdatesPagePreview from "./preview-templates/UpdatesPagePreview";
 
 CMS.registerMediaLibrary(uploadcare);
 CMS.registerMediaLibrary(cloudinary);
