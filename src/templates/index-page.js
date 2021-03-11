@@ -118,6 +118,7 @@ export const pageQuery = graphql`
             }
             certificationsSection {
               sectionTitle
+              bgImage
               certifications {
                 image
                 title
