@@ -8,58 +8,68 @@ import classes from "./index.module.scss";
 
 export const IndexPageTemplate = ({ lang, carrousel, about, productsSection, certificationsSection, updatesSection }) => (
   <>
-    <Section className={classes.carrouselContainer}>
-      <Carrousel showArrows={true} showBullets={true}>
-        {carrousel.map((carrouselItem, i) => {
-          return (
-            <div key={i} className={classes.carrouselItem}>
-              <img src={carrouselItem.image} />
-              <div className={classes.containerData}>
-                <span className={classes.title}>{carrouselItem.title}</span>
-                <span className={classes.subtitle}>{carrouselItem.subtitle}</span>
-                <Button type="secondary">{carrouselItem.button}</Button>
+    {carrousel && (
+      <Section className={classes.carrouselContainer}>
+        <Carrousel showArrows={true} showBullets={true}>
+          {carrousel.map((carrouselItem, i) => {
+            return (
+              <div key={i} className={classes.carrouselItem}>
+                <img src={carrouselItem.image} />
+                <div className={classes.containerData}>
+                  <span className={classes.title}>{carrouselItem.title}</span>
+                  <span className={classes.subtitle}>{carrouselItem.subtitle}</span>
+                  <Button type="secondary">{carrouselItem.button}</Button>
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </Carrousel>
-    </Section>
-    <Section solidBg="solid" title={about.sectionTitle} className={classes.aboutUsContainer}>
-      <div className={classes.aboutCard}>
-        <div className={classes.aboutContent}>
-          <div className={classes.title}>{about.title}</div>
-          <div className={classes.content}>{about.content}</div>
-          <Button type="primary">{about.button}</Button>
+            );
+          })}
+        </Carrousel>
+      </Section>
+    )}
+    {about && (
+      <Section solidBg="solid" title={about.sectionTitle} className={classes.aboutUsContainer}>
+        <div className={classes.aboutCard}>
+          <div className={classes.aboutContent}>
+            <div className={classes.title}>{about.title}</div>
+            <div className={classes.content}>{about.content}</div>
+            <Button type="primary">{about.button}</Button>
+          </div>
+          <img src={about.image} />
         </div>
-        <img src={about.image} />
-      </div>
-    </Section>
-    <Section className={classes.productsContainer} title={productsSection.sectionTitle} type="secondary">
-      <div className={classes.cardsContainer}>
-        {productsSection.products.map((product) => {
-          return <Card type="secondary" {...product} />;
-        })}
-      </div>
-    </Section>
-    <Section className={classes.certificationContainer} type="secondary" image={certificationsSection.bgImage} title="CERTIFICACIONES">
-      <div className={classes.cardsContainer}>
-        {certificationsSection.certifications.map((certification, i) => {
-          return <Card key={i} type="tertiary" {...certification} />;
-        })}
-      </div>
-    </Section>
-    <Section title={updatesSection.sectionTitle} className={classes.newsContainer} type="secondary">
-      <div className={classes.containerCards}>
-        {updatesSection.updates.map((update) => {
-          const props = { ...update };
-          props.button = {
-            text: update.button,
-            action: () => {},
-          };
-          return <Card className={classes.card} type="primary" {...props} />;
-        })}
-      </div>
-    </Section>
+      </Section>
+    )}
+    {productsSection && (
+      <Section className={classes.productsContainer} title={productsSection.sectionTitle} type="secondary">
+        <div className={classes.cardsContainer}>
+          {productsSection.products.map((product) => {
+            return <Card type="secondary" {...product} />;
+          })}
+        </div>
+      </Section>
+    )}
+    {certificationsSection && (
+      <Section className={classes.certificationContainer} type="secondary" image={certificationsSection.bgImage} title="CERTIFICACIONES">
+        <div className={classes.cardsContainer}>
+          {certificationsSection.certifications.map((certification, i) => {
+            return <Card key={i} type="tertiary" {...certification} />;
+          })}
+        </div>
+      </Section>
+    )}
+    {updatesSection && (
+      <Section title={updatesSection.sectionTitle} className={classes.newsContainer} type="secondary">
+        <div className={classes.containerCards}>
+          {updatesSection.updates.map((update) => {
+            const props = { ...update };
+            props.button = {
+              text: update.button,
+              action: () => {},
+            };
+            return <Card className={classes.card} type="primary" {...props} />;
+          })}
+        </div>
+      </Section>
+    )}
   </>
 );
 
