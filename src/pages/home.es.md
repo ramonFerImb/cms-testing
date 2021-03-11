@@ -25,10 +25,7 @@ about:
   title: Características principales de HDC
   content: Lorem ipsum dolor sit amet, consect etur adipiscing elit. Lorem ipsum dolor sit am et, consectetur adipiscing elit. Lorem ip sum dolor sit a met, consectetur adipisci ng elit.
   button: Seguir leyendo
-  images:
-    - image1: /img/default-fallback-image.png
-      image2: /img/default-fallback-image.png
-      image3: /img/default-fallback-image.png
+  image: /img/default-fallback-image.png
 productsSection:
   sectionTitle: Nuestros productos
   products:

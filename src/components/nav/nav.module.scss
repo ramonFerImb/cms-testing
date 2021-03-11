@@ -1,0 +1,131 @@
+@import "./../../styles/variables.scss";
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 13rem;
+  z-index: 999;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.32);
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background: $white;
+  border-bottom: 1px solid gray;
+  box-sizing: border-box;
+  .logo {
+    place-self: center;
+  }
+  .ico-menu {
+    display: none;
+  }
+  .separator {
+    display: none;
+  }
+  .navItems {
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    box-sizing: border-box;
+    .selected {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      display: grid;
+      place-items: center;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 1rem;
+        background: $primary;
+        transform: translate(0, -50%);
+        border: 0.2rem solid $white;
+        border-radius: 1rem;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: $black;
+      font-weight: bolder;
+    }
+    select {
+      border: transparent;
+      color: $primary;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+  }
+
+  @media (max-width: $bpM) {
+    .logo {
+      position: absolute;
+      top: 1.8rem;
+      left: 2rem;
+      width: 54px;
+      height: 25px;
+    }
+
+    .ico-menu {
+      position: absolute;
+      top: 1.8rem;
+      right: 2rem;
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: url("../../img/ico-menu.svg") no-repeat;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .separator {
+      display: block;
+      margin: 0 0 28px;
+      width: 100%;
+      border: 1px solid #3c3c3c;
+    }
+    .navItems {
+      position: absolute;
+      left: 0;
+      top: 6rem;
+      max-width: 100%;
+      width: 100%;
+      grid-auto-flow: row;
+      place-items: flex-start;
+      padding: 4rem;
+      background: white;
+      z-index: 200;
+      transform: translateX(100%);
+      transition: transform 0.4s;
+      .selected {
+        place-items: flex-start;
+        &:after {
+          content: none;
+        }
+      }
+      > div {
+        min-height: 5.6rem;
+      }
+    }
+
+    .separator {
+      width: 100%;
+    }
+  }
+  &.showMenu {
+    height: 100%;
+    .navItems {
+      transform: translateX(0);
+    }
+
+    .ico-menu {
+      background: url("../../img/ico-close.svg") no-repeat;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import "./../../styles/variables.scss";
+
+.container {
+  text-transform: capitalize;
+  padding: 1rem 4rem;
+  background: $black;
+  border: none;
+  border-radius: 0.4rem;
+  color: $white;
+  font-family: Helvetica, sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+  &.secondary {
+    background: $white;
+    color: $black;
+  }
+}

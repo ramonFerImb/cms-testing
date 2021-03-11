@@ -1,0 +1,40 @@
+@import "./../../styles/variables.scss";
+
+.container {
+  padding: 4rem 15rem;
+  @media (max-width: $bpM) {
+    padding: 2rem 0;
+  }
+  @media (max-width: $bpS) {
+    padding: 2rem 4rem;
+  }
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    margin: 0 0 2rem 2rem;
+    text-transform: uppercase;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 0.75rem;
+      height: 100%;
+      background: $primary;
+      border-radius: 1rem;
+      border: 1px solid $white;
+      transform: translate(-200%, -5%);
+    }
+  }
+  &.solidBg {
+    background: $white;
+  }
+  &.bgImage {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &.secondary {
+    color: $white;
+  }
+}

@@ -1,0 +1,182 @@
+@import "./../styles/variables.scss";
+.carrousel-container {
+  margin-top: 13rem;
+  padding: 0 8rem 4.2rem;
+  background: #f8fafb;
+  @media (max-width: $bpM) {
+    padding: 0;
+  }
+}
+.carrouselItem {
+  display: grid;
+  .containerData,
+  img {
+    grid-row-start: 1;
+    grid-row-end: -1;
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  .containerData {
+    display: flex;
+    flex-direction: column;
+    padding: 17.8rem 16.8rem;
+    max-width: 52rem;
+    .title {
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-size: 4.8rem;
+      color: $white;
+    }
+    .subtitle {
+      font-size: 2.4rem;
+      color: $white;
+    }
+    button {
+      margin-top: 4rem;
+    }
+  }
+}
+
+.containerCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.container {
+  position: relative;
+}
+.containerImage {
+  width: 100%;
+  height: 100%;
+}
+.containerImage > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aboutCard {
+  width: 100%;
+  min-height: 38.6rem;
+  display: grid;
+  grid-template-columns: 7fr 5.25fr;
+  img {
+    width: 63.5rem;
+    height: 38.6rem;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  .aboutContent {
+    background: $white;
+    color: $black;
+    font-size: 2.4rem;
+    padding: 4rem 4rem 4rem 0;
+    .title {
+      margin-bottom: 1rem;
+      font-weight: bolder;
+      text-transform: uppercase;
+    }
+    .content {
+      font-size: 1.8rem;
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.products-container,
+.certificationContainer,
+.updatesContainer {
+  .cardsContainer {
+    display: grid;
+    grid-gap: 2rem;
+    place-items: center;
+    @media (min-width: $bpS) {
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: $bpM) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: $bpL) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+.certificationContainer {
+  .cardsContainer {
+    @media (min-width: $bpS) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: $bpM) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: $bpL) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.updatesContainer {
+  .cardsContainer {
+    @media (min-width: $bpL) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+// products container
+.products-container {
+  background: $primary;
+  .cardsContainer {
+    display: flex;
+    justify-content: space-between;
+
+    .secondary {
+      margin-right: 2rem;
+      color: $white;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .title {
+    color: $white;
+  }
+}
+
+// news section
+.products-container,
+.news-container {
+  position: relative;
+  background: $primary;
+  overflow: hidden;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 99;
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    clip-path: square(170px);
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+    box-shadow: -170px -170px 0 0 $white;
+  }
+
+  &:after {
+    bottom: 0;
+    right: 0;
+    box-shadow: 170px 170px 0 0 $white;
+  }
+}
