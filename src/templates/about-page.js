@@ -9,39 +9,49 @@ import classes from "./about.module.scss";
 export const AboutPageTemplate = ({ section1, section2, section3, aboutSection }) => {
   return (
     <>
-      <Section className={classes.carrouselContainer}>
-        <Carrousel className={classes.carrousel} showArrows={true} showBullets={false}>
-          {aboutSection.images.map((carrouselItem, i) => {
-            return (
-              <div key={i} className={classes.carrouselItem}>
-                <img src={carrouselItem.image} alt="imagen" />
-              </div>
-            );
-          })}
-        </Carrousel>
-      </Section>
-      <Section className={classes.preSectionParraf}>
-        <h1>{section1.title}</h1>
-        <h2>{section1.subtitle}</h2>
-      </Section>
-      <Section title="Apartado 1">
-        <p>{aboutSection.content}</p>
-      </Section>
-      <Section className={classes.section2Container} type="secondary">
-        <div className={classes.cardsContainer}>
-          {section2.cards.map((card, i) => {
-            return <Card key={i} type="highlighted" {...card} />;
-          })}
-        </div>
-      </Section>
-      <Section title="apartado 3" className={classes.section3container}>
-        <p>{section3.subtitle}</p>
-        <div className={classes.cardsContainer}>
-          {section3.cards.map((update, i) => {
-            return <Card key={i} type="long" {...update} />;
-          })}
-        </div>
-      </Section>
+      {aboutSection && (
+        <Section className={classes.carrouselContainer}>
+          <Carrousel className={classes.carrousel} showArrows={true} showBullets={false}>
+            {aboutSection.images.map((carrouselItem, i) => {
+              return (
+                <div key={i} className={classes.carrouselItem}>
+                  <img src={carrouselItem.image} alt="imagen" />
+                </div>
+              );
+            })}
+          </Carrousel>
+        </Section>
+      )}
+      {section1 && (
+        <Section className={classes.preSectionParraf}>
+          <h1>{section1.title}</h1>
+          <h2>{section1.subtitle}</h2>
+        </Section>
+      )}
+      {aboutSection && (
+        <Section title="Apartado 1">
+          <p>{aboutSection.content}</p>
+        </Section>
+      )}
+      {section2 && (
+        <Section className={classes.section2Container} type="secondary">
+          <div className={classes.cardsContainer}>
+            {section2.cards.map((card, i) => {
+              return <Card key={i} type="highlighted" {...card} />;
+            })}
+          </div>
+        </Section>
+      )}
+      {section3 && (
+        <Section title="apartado 3" className={classes.section3container}>
+          <p>{section3.subtitle}</p>
+          <div className={classes.cardsContainer}>
+            {section3.cards.map((update, i) => {
+              return <Card key={i} type="long" {...update} />;
+            })}
+          </div>
+        </Section>
+      )}
     </>
   );
 };
