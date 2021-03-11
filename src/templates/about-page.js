@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { useTranslate } from "../utils/useTranslate";
 import { Layout, Section, Carrousel, Button, Card } from "./../components";
