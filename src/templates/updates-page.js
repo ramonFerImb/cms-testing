@@ -6,7 +6,7 @@ import { Layout, Section, Carrousel, Button, Card } from "./../components";
 
 import classes from "./updates.module.scss";
 
-export const UpdatePageTemplate = ({ carruselSection, updatesSection }) => (
+export const UpdatesPageTemplate = ({ carruselSection, updatesSection }) => (
   <>
     {carruselSection && (
       <Section className={classes.carrouselContainer}>
@@ -51,7 +51,7 @@ const UpdatePage = ({ data }) => {
 
   return (
     <Layout selected="updates">
-      <UpdatePageTemplate {...filteredData} />
+      <UpdatesPageTemplate {...filteredData} />
     </Layout>
   );
 };
@@ -59,7 +59,7 @@ const UpdatePage = ({ data }) => {
 export default UpdatePage;
 
 export const pageQuery = graphql`
-  query UpdatePageTemplate {
+  query UpdatesPageTemplate {
     allMarkdownRemark(filter: { frontmatter: { id: { eq: "updates" } } }) {
       edges {
         node {
