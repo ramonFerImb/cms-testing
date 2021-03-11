@@ -50,7 +50,7 @@ export const AboutPageTemplate = ({ section1, section2, section3, section4, sect
         <Section title="apartado 3" className={classes.section3container}>
           <p>{section3.subtitle}</p>
           <div className={classes.cardsContainer}>
-            {section3.cards.map((update, i) => {
+            {section3.cards && section3.cards.map((update, i) => {
               return <Card key={i} type="long" {...update} />;
             })}
           </div>
@@ -59,7 +59,7 @@ export const AboutPageTemplate = ({ section1, section2, section3, section4, sect
       {section4 && (
         <Section title="apartado 4" className={classes.section4container} type="secondary">
           <div className={classes.galleryContainer}>
-            {section4.images.map((gallery, i) => {
+            {section4.images && section4.images.map((gallery, i) => {
               return <img key={i} src={gallery.image} alt="imagen" />;
             })}
           </div>
@@ -74,7 +74,7 @@ export const AboutPageTemplate = ({ section1, section2, section3, section4, sect
         <Section className={classes.section6container}>
           <p>{section6.title}</p>
           <div className={classes.cardsContainer}>
-            {section6.cards.map((card, i) => {
+            {section6.cards && section6.cards.map((card, i) => {
               return <Card key={i} type="tertiary" {...card} />;
             })}
           </div>
@@ -84,7 +84,7 @@ export const AboutPageTemplate = ({ section1, section2, section3, section4, sect
         <Section className={classes.section7container}>
           <p>{section7.title}</p>
           <div className={classes.cardsContainer}>
-            {section7.cards.map((card, i) => {
+            {section7.cards && section7.cards.map((card, i) => {
               return <Card key={i} type="tertiary" {...card} />;
             })}
           </div>

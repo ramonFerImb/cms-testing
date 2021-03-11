@@ -5,6 +5,7 @@ const AboutPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(["data"]).toJS();
   return (
     <AboutPageTemplate
+      aboutSection={data.aboutSection}
       section1={data.section1}
       section2={data.section2}
       section3={data.section3}
