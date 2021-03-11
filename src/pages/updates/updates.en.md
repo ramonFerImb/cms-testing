@@ -7,9 +7,9 @@ carruselSection:
   title: Noticia destacada
   subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   images:
-    - image: /img/default-fallback-image.png
-    - image: /img/default-fallback-image.png
-    - image: /img/default-fallback-image.png
+    - image: /img/imgs pantallazos.png
+    - image: /img/imgs pantallazos.png
+    - image: /img/imgs pantallazos.png
 updatesSection:
   data: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
   sectionTitle: Noticias

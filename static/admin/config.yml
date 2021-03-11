@@ -122,48 +122,48 @@ collections:
       - { label: Id, name: id, widget: hidden, default: updates }
       - { label: Data, name: data, widget: hidden, default: true }
       - { label: Language, name: lang, widget: string }
-      - {
-          label: Carrousel,
-          name: carruselSection,
-          widget: list,
-          fields:
-            [
-              { label: title, name: title, widget: string, default: test },
-              { label: subtitle, name: subtitle, widget: string, default: test },
-              { label: Carrousel Images, name: images, widget: list, fields: [{ label: Image, name: image, widget: image }] },
-            ],
-        }
-      - {
-          label: Updates Section,
-          name: updatesSection,
-          widget: object,
-          fields:
-            [
-              { label: Data, name: data, widget: text },
-              { label: Title, name: sectionTitle, widget: string, default: Noticias },
-              {
-                label: Updates,
-                name: updates,
-                widget: list,
-                fields:
-                  [
-                    { label: Image, name: image, widget: image },
-                    { label: Title, name: title, widget: string, default: Noticia 1 },
-                    { label: Date, name: date, widget: datetime },
-                    { label: Button, name: button, widget: string, default: Button },
-                    {
-                      label: Subtitle,
-                      name: subtitle,
-                      widget: string,
-                      default: Lorem ipsum dolor sit amet,
-                      consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.,
-                    },
-                  ],
-              },
-            ],
-        }
+      # - {
+      #     label: Carrousel,
+      #     name: carruselSection,
+      #     widget: list,
+      #     fields:
+      #       [
+      #         { label: title, name: title, widget: string, default: test },
+      #         { label: subtitle, name: subtitle, widget: string, default: test },
+      #         { label: Carrousel Images, name: images, widget: list, fields: [{ label: Image, name: image, widget: image }] },
+      #       ],
+      #   }
+      # - {
+      #     label: Updates Section,
+      #     name: updatesSection,
+      #     widget: object,
+      #     fields:
+      #       [
+      #         { label: Data, name: data, widget: text },
+      #         { label: Title, name: sectionTitle, widget: string, default: Noticias },
+      #         {
+      #           label: Updates,
+      #           name: updates,
+      #           widget: list,
+      #           fields:
+      #             [
+      #               { label: Image, name: image, widget: image },
+      #               { label: Title, name: title, widget: string, default: Noticia 1 },
+      #               { label: Date, name: date, widget: datetime },
+      #               { label: Button, name: button, widget: string, default: Button },
+      #               {
+      #                 label: Subtitle,
+      #                 name: subtitle,
+      #                 widget: string,
+      #                 default: Lorem ipsum dolor sit amet,
+      #                 consectetur adipiscing elit,
+      #                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      #                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.,
+      #               },
+      #             ],
+      #         },
+      #       ],
+      #   }
 
   # - name: blog
   #   label: Blog

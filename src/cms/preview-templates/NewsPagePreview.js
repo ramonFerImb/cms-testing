@@ -5,12 +5,12 @@ const NewsPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(["data"]).toJS();
   return (
     <UpdatesPageTemplate
-      lang={data.lang}
-      carrousel={data.carrousel}
-      about={data.about}
-      productsSection={data.productsSection}
-      certificationsSection={data.certificationsSection}
-      updatesSection={data.updatesSection}
+    // lang={data.lang}
+    // carrousel={data.carrousel}
+    // about={data.about}
+    // productsSection={data.productsSection}
+    // certificationsSection={data.certificationsSection}
+    // updatesSection={data.updatesSection}
     />
   );
 };

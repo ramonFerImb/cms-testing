@@ -5,11 +5,11 @@ const UpdatesPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(["data"]).toJS();
   return (
     <UpdatesPageTemplate
-      templateKey={data.templateKey}
-      id={data.id}
-      data={data.data}
-      carruselSection={data.carrouselSection}
-      updatesSection={data.updatesSection}
+    // templateKey={data.templateKey}
+    // id={data.id}
+    // data={data.data}
+    // carruselSection={data.carrouselSection}
+    // updatesSection={data.updatesSection}
     />
   );
 };
