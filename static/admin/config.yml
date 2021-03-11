@@ -171,6 +171,10 @@ collections:
     filter: { field: data, value: true }
     slug: updates.{{fields.lang}}
     fields:
+      - { label: Template Key, name: templateKey, widget: hidden, default: about-page }
+      - { label: Id, name: id, widget: hidden, default: about }
+      - { label: Data, name: data, widget: hidden, default: true }
+      - { label: Language, name: lang, widget: string }
       - {
           label: Section 1,
           name: section1,
@@ -212,14 +216,50 @@ collections:
           label: Section 4,
           name: section4,
           widget: object,
+          fields: [{ label: images, name: images, widget: list, fields: [{ label: Image, name: image, widget: image }] }],
+        }
+      - { label: Section 5, name: section5, widget: object, fields: [{ label: Content, name: content, widget: text }] }
+      - {
+          label: Section 6,
+          name: section6,
+          widget: object,
           fields:
             [
+              { label: Title, name: title, widget: text },
               {
-                label: images,
-                name: images,
+                label: cards,
+                name: cards,
                 widget: list,
-                fields: [{ label: Image, name: image, widget: image }, { label: subtitle, name: subtitle, widget: string, default: test }],
+                fields: [{ label: Image, name: image, widget: image }, { label: Subtitle, name: subtitle, widget: text }],
               },
+            ],
+        }
+      - {
+          label: Section 7,
+          name: section7,
+          widget: object,
+          fields:
+            [
+              { label: Title, name: title, widget: text },
+              {
+                label: cards,
+                name: cards,
+                widget: list,
+                fields: [{ label: Image, name: image, widget: image }, { label: Subtitle, name: subtitle, widget: text }],
+              },
+            ],
+        }
+      - { label: Section 8, name: section8, widget: object, fields: [{ label: Content, name: content, widget: text }] }
+      - {
+          label: About Section,
+          name: aboutSection,
+          widget: object,
+          fields:
+            [
+              { label: Title, name: title, widget: string },
+              { label: Content, name: content, widget: text },
+              { label: Buton, name: buton, widget: string },
+              { label: Images, name: images, widget: list, fields: [{ label: Image, name: image, widget: image }] },
             ],
         }
 
