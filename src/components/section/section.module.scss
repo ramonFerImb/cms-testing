@@ -14,6 +14,7 @@
     position: relative;
     margin: 0 0 2rem 2rem;
     text-transform: uppercase;
+    color: $primary;
     &:before {
       content: "";
       position: absolute;
@@ -26,7 +27,7 @@
     }
   }
   &.solidBg {
-    background: $white;
+    background: $bgLight;
   }
   &.bgImage {
     background-repeat: no-repeat;
@@ -35,6 +36,31 @@
     background-size: cover;
   }
   &.secondary {
+    position: relative;
     color: $white;
+    background-color: $primary;
+    overflow: hidden;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: 99;
+      width: 340px;
+      height: 340px;
+      border-radius: 50%;
+      clip-path: square(170px);
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      box-shadow: -170px -170px 0 0 $white;
+    }
+
+    &:after {
+      bottom: 0;
+      right: 0;
+      box-shadow: 170px 170px 0 0 $white;
+    }
   }
 }

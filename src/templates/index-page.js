@@ -27,7 +27,7 @@ export const IndexPageTemplate = ({ lang, carrousel, about, productsSection, cer
       </Section>
     )}
     {about && (
-      <Section solidBg="solid" title={about.sectionTitle} className={classes.aboutUsContainer}>
+      <Section title={about.sectionTitle} className={classes.aboutUsContainer}>
         <div className={classes.aboutCard}>
           <div className={classes.aboutContent}>
             <div className={classes.title}>{about.title}</div>

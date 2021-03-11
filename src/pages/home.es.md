@@ -2,7 +2,6 @@
 data: true
 id: home
 lang: es
-templateKey: index-page
 title: Pagina inicio
 image: /img/default-fallback-image.png
 carrousel:
@@ -44,17 +43,6 @@ certificationsSection:
       title: Lorem ipsum
       subtitle: Lorem ipsum dolor.
 
-    - image: /img/default-fallback-image.png
-      title: Lorem
-      subtitle: Lorem ipsum dolor.
-
-    - image: /img/default-fallback-image.png
-      title: Ipsum dolor
-      subtitle: Lorem ipsum dolor.
-
-    - image: /img/default-fallback-image.png
-      title: Ipsum dolor
-      subtitle: Lorem ipsum dolor.
 updatesSection:
   sectionTitle: Noticias
   updates:
