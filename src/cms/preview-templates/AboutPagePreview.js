@@ -1,10 +1,10 @@
 import React from "react";
-import { UpdatesPageTemplate } from "../../templates/updates-page";
+import { AboutPageTemplate } from "../../templates/about-page";
 
-const UpdatesPagePreview = ({ entry, getAsset }) => {
+const AboutPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(["data"]).toJS();
   return (
-    <UpdatesPageTemplate
+    <AboutPageTemplate
     // templateKey={data.templateKey}
     // id={data.id}
     // data={data.data}
@@ -14,4 +14,4 @@ const UpdatesPagePreview = ({ entry, getAsset }) => {
   );
 };
 
-export default UpdatesPagePreview;
+export default AboutPagePreview;

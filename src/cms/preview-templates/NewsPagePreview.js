@@ -3,17 +3,7 @@ import { UpdatesPageTemplate } from "../../templates/updates-page";
 
 const NewsPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(["data"]).toJS();
-  return (
-    <UpdatesPageTemplate
-      // lang={data.lang}
-      carruselSection={data.carruselSection}
-      updatesSection={data.updatesSection}
-      // about={data.about}
-      // productsSection={data.productsSection}
-      // certificationsSection={data.certificationsSection}
-      // updatesSection={data.updatesSection}
-    />
-  );
+  return <UpdatesPageTemplate carruselSection={data.carruselSection} updatesSection={data.updatesSection} />;
 };
 
 export default NewsPagePreview;
