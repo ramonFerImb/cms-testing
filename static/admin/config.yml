@@ -164,8 +164,8 @@ collections:
               },
             ],
         }
-  - name: "updates"
-    label: "Updates"
+  - name: about
+    label: About
     folder: src/pages/updates
     create: true
     filter: { field: data, value: true }
@@ -189,6 +189,36 @@ collections:
                 widget: list,
                 fields:
                   [{ label: title, name: title, widget: string, default: test }, { label: subtitle, name: subtitle, widget: string, default: test }],
+              },
+            ],
+        }
+      - {
+          label: Section 3,
+          name: section3,
+          widget: object,
+          fields:
+            [
+              { label: title, name: title, widget: string, default: test },
+              { label: subtitle, name: subtitle, widget: string, default: test },
+              {
+                label: Cards,
+                name: cards,
+                widget: list,
+                fields: [{ label: Image, name: image, widget: image }, { label: subtitle, name: subtitle, widget: string, default: test }],
+              },
+            ],
+        }
+      - {
+          label: Section 4,
+          name: section4,
+          widget: object,
+          fields:
+            [
+              {
+                label: images,
+                name: images,
+                widget: list,
+                fields: [{ label: Image, name: image, widget: image }, { label: subtitle, name: subtitle, widget: string, default: test }],
               },
             ],
         }
