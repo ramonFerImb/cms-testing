@@ -13,12 +13,6 @@ const AboutPagePreview = ({ entry, getAsset }) => {
       section6={data.section6}
       section7={data.section7}
       section8={data.section8}
-      aboutSection={data.aboutSection}
-      // templateKey={data.templateKey}
-      // id={data.id}
-      // data={data.data}
-      // carruselSection={data.carrouselSection}
-      // updatesSection={data.updatesSection}
     />
   );
 };
