@@ -111,8 +111,8 @@ collections:
             ],
         }
 
-  - name: updates
-    label: Updates
+  - name: "updates"
+    label: "Updates"
     folder: src/pages/updates
     create: true
     filter: { field: data, value: true }
