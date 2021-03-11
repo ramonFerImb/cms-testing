@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { useTranslate } from "../utils/useTranslate";
-import { Layout, Section, Carrousel, Card } from "./../components";
+import { Layout, Section, Carrousel, Card, Button } from "./../components";
 
 import classes from "./about.module.scss";
 
@@ -9,27 +9,32 @@ export const AboutPageTemplate = ({ section1, section2, section3, section4, sect
   return (
     <>
       {aboutSection && (
-        <Section className={classes.carrouselContainer}>
-          <Carrousel className={classes.carrousel} showArrows={true} showBullets={false}>
-            {aboutSection.images.map((carrouselItem, i) => {
-              return (
-                <div key={i} className={classes.carrouselItem}>
-                  <img src={carrouselItem.image} alt="imagen" />
-                </div>
-              );
-            })}
-          </Carrousel>
-        </Section>
+        <>
+          <Section className={classes.carrouselContainer}>
+            <Carrousel className={classes.carrousel} showArrows={true} showBullets={true}>
+              {aboutSection.images.map((carrouselItem, i) => {
+                return (
+                  <div key={i} className={classes.carrouselItem}>
+                    <img src={carrouselItem.image} />
+                    <div className={classes.containerData}>
+                      <span className={classes.title}>{carrouselItem.title}</span>
+                      <span className={classes.subtitle}>{carrouselItem.subtitle}</span>
+                      <Button type="secondary">{carrouselItem.button}</Button>
+                    </div>
+                  </div>
+                );
+              })}
+            </Carrousel>
+          </Section>
+          <Section className={classes.preSectionParraf}>
+            <h1>{aboutSection.title}</h1>
+            <h2>{aboutSection.subtitle}</h2>
+          </Section>
+        </>
       )}
       {section1 && (
-        <Section className={classes.preSectionParraf}>
-          <h1>{section1.title}</h1>
-          <h2>{section1.subtitle}</h2>
-        </Section>
-      )}
-      {aboutSection && (
-        <Section title="Apartado 1">
-          <p>{aboutSection.content}</p>
+        <Section title={section1.title}>
+          <p>{section1.content}</p>
         </Section>
       )}
       {section2 && (
@@ -154,14 +159,17 @@ export const aboutPageQuery = graphql`
             aboutSection {
               title
               content
-              button
+              subtitle
               images {
                 image
+                title
+                subtitle
+                button
               }
             }
             section1 {
               title
-              subtitle
+              content
             }
             section2 {
               cards {

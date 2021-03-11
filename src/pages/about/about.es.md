@@ -4,9 +4,26 @@ id: about
 lang: es
 title: Sobre nosotros
 image: /img/default-fallback-image.png
-section1:
+aboutSection:
   title: Título del producto seleccionado
   subtitle: Subtítulo del producto
+  content: Lorem ipsum dolor sit amet, consect etur adipiscing elit. Lorem ipsum dolor sit am et, consectetur adipiscing elit. Lorem ip sum dolor sit a met, consectetur adipisci ng elit.
+  images:
+    - image: /img/Rectangle-3.png
+      title: Trabaja con eficacia
+      subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      button: Más información
+    - image: /img/Rectangle-3.png
+      title: Trabaja con eficacia
+      subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      button: Más información
+    - image: /img/Rectangle-3.png
+      title: Trabaja con eficacia
+      subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      button: Más información
+section1:
+  title: Título del producto seleccionado
+  content: Subtítulo del producto
 section2:
   cards:
     - title: Menos hardware
@@ -62,13 +79,4 @@ section7:
       subtitle: Firewall
 section8:
   content: everis Tactical HDC ofrece una serie de beneficios en escenarios de despliegue rápido que ningún otro producto del mercado es capaz de conseguir.
-aboutSection:
-  title: Características principales de HDC
-  content: Lorem ipsum dolor sit amet, consect etur adipiscing elit. Lorem ipsum dolor sit am et, consectetur adipiscing elit. Lorem ip sum dolor sit a met, consectetur adipisci ng elit.
-  button: Descargar PDF
-  images:
-    - image: /img/default-fallback-image.png
-    - image: /img/default-fallback-image.png
-    - image: /img/default-fallback-image.png
-    - image: /img/default-fallback-image.png
 ---
