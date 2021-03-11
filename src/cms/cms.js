@@ -9,7 +9,7 @@ CMS.registerMediaLibrary(uploadcare);
 CMS.registerMediaLibrary(cloudinary);
 
 CMS.registerPreviewTemplate("index", IndexPagePreview);
-CMS.registerPreviewTemplate("index", UpdatesPagePreview);
+CMS.registerPreviewTemplate("updates", UpdatesPagePreview);
 // CMS.registerPreviewTemplate('about', AboutPagePreview)
 // CMS.registerPreviewTemplate('products', ProductPagePreview)
 // CMS.registerPreviewTemplate('blog', BlogPostPreview)
