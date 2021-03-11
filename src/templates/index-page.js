@@ -48,7 +48,7 @@ export const IndexPageTemplate = ({ lang, carrousel, about, productsSection, cer
       </Section>
     )}
     {certificationsSection && (
-      <Section className={classes.certificationContainer} type="secondary" image={certificationsSection.bgImage} title="CERTIFICACIONES">
+      <Section className={classes.certificationContainer} image={certificationsSection.bgImage} title="CERTIFICACIONES">
         <div className={classes.cardsContainer}>
           {certificationsSection.certifications.map((certification, i) => {
             return <Card key={i} type="tertiary" {...certification} />;
