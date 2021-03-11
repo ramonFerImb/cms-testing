@@ -3,22 +3,24 @@ id: home
 data: true
 lang: en
 carrousel:
-  - image: /img/imgs pantallazos.png
+  - image: /img/Rectangle-3.png
     title: Trabaja con eficacia
     subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     button: Más información
-  - image: /img/imgs pantallazos.png
+  - image: /img/Rectangle-3.png
     title: Trabaja con eficacia
     subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     button: Más información
-  - image: /img/imgs pantallazos.png
+  - image: /img/Rectangle-3.png
     title: Trabaja con eficacia
     subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     button: Más información
 about:
   sectionTitle: Sobre nosotros
   title: Características principales de HDC
-  description: Lorem ipsum dolor sit amet, consect etur adipiscing elit. Lorem ipsum dolor sit am et, consectetur adipiscing elit. Lorem ip sum dolor sit a met, consectetur adipisci ng elit.
+  description: Lorem ipsum dolor sit amet, consect etur adipiscing elit. Lorem
+    ipsum dolor sit am et, consectetur adipiscing elit. Lorem ip sum dolor sit a
+    met, consectetur adipisci ng elit.
   button: Seguir leyendo
   image: /img/Bitmap-1.png
 productsSection:
@@ -26,7 +28,8 @@ productsSection:
   products:
     - image: /img/Imagen-4.png
       title: MODULARIDAD
-      subtitle: Facilidad para integrar nuevos elementos de conectividad, suministro y seguridad
+      subtitle: Facilidad para integrar nuevos elementos de conectividad, suministro y
+        seguridad
     - image: /img/Imagen-4.png
       title: AGILIDAD
       subtitle: Facilidad en su transporte y alta resistencia a fallos
