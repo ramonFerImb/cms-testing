@@ -17,7 +17,7 @@ collections:
     folder: "src/pages"
     create: true
     filter: { field: data, value: true }
-    slug: "{{id}}.{{fields.lang}}"
+    slug: "home.{{fields.lang}}"
     fields:
       - { label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page" }
       - { label: "Id", name: "id", widget: "hidden", default: "home" }
@@ -113,7 +113,7 @@ collections:
 
   - name: updates
     label: Updates
-    folder: src/updates
+    folder: src/pages/updates
     create: true
     filter: { field: data, value: true }
     slug: updates.{{fields.lang}}
