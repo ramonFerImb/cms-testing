@@ -164,6 +164,19 @@ collections:
               },
             ],
         }
+  - name: news
+    label: News
+    folder: src/pages/updates/news
+    create: true
+    filter: { field: data, value: true }
+    slug: {{year}}.{{month}}.{{day}}.{{fields.lang}}
+    fields:
+      - { label: Template Key, name: templateKey, widget: hidden, default: updates-page }
+      - { label: Id, name: id, widget: hidden, default: updates }
+      - { label: Data, name: data, widget: hidden, default: true }
+      - { label: Language, name: lang, widget: string }
+      - { label: Body, name: body, widget: markdown }
+
   - name: about
     label: About
     folder: src/pages/updates
@@ -289,19 +302,6 @@ collections:
           widget: object,
           fields: [{ label: title, name: title, widget: string }, { label: Content, name: content, widget: text }],
         }
-  - name: news
-    label: News
-    folder: src/pages/updates/news
-    create: true
-    filter: { field: data, value: true }
-    slug: {{year}}.{{month}}.{{day}}.{{fields.lang}}
-    fields:
-      - { label: Template Key, name: templateKey, widget: hidden, default: updates-page }
-      - { label: Id, name: id, widget: hidden, default: updates }
-      - { label: Data, name: data, widget: hidden, default: true }
-      - { label: Language, name: lang, widget: string }
-      - { label: Body, name: body, widget: markdown }
-      
 
   # - name: blog
   #   label: Blog
