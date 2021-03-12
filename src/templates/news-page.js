@@ -60,7 +60,7 @@ export const NewsPageTemplate = ({ html }) => (
 
 const NewsPage = ({ data }) => {
   const { locale } = useTranslate();
-  const node = data.allMarkdownRemark.edges.find((edge) => edge.node.frontmatter.lang === locale).node;
+  const node = data.allMarkdownRemark.edges.find((edge) => edge.node.frontmatter.lang === locale)?.node;
   return (
     <Layout selected="updates">
       <NewsPageTemplate {...node} />
