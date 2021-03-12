@@ -35,7 +35,9 @@ export const UpdatesPageTemplate = ({ carruselSection, updatesSection }) => (
             const props = { ...update };
             props.button = {
               text: update.button,
-              action: () => {},
+              action: () => {
+                console.log(update);
+              },
             };
             return <Card className={classes.card} type="long" {...props} />;
           })}

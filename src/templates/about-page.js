@@ -12,23 +12,24 @@ export const AboutPageTemplate = ({ section1, section2, section3, section4, sect
         <>
           <Section className={classes.carrouselContainer}>
             <Carrousel className={classes.carrousel} showArrows={true} showBullets={true}>
-              {aboutSection.images.map((carrouselItem, i) => {
-                return (
-                  <div key={i} className={classes.carrouselItem}>
-                    <img src={carrouselItem.image} />
-                    <div className={classes.containerData}>
-                      <span className={classes.title}>{carrouselItem.title}</span>
-                      <span className={classes.subtitle}>{carrouselItem.subtitle}</span>
-                      <Button type="secondary">{carrouselItem.button}</Button>
+              {aboutSection.images &&
+                aboutSection.images.map((carrouselItem, i) => {
+                  return (
+                    <div key={i} className={classes.carrouselItem}>
+                      <img src={carrouselItem.image} />
+                      <div className={classes.containerData}>
+                        <span className={classes.title}>{carrouselItem.title}</span>
+                        <span className={classes.subtitle}>{carrouselItem.subtitle}</span>
+                        <Button type="secondary">{carrouselItem.button}</Button>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
             </Carrousel>
           </Section>
           <Section className={classes.preSectionParraf}>
             <h1>{aboutSection.title}</h1>
-            <h2>{aboutSection.subtitle}</h2>
+            <h2>{aboutSection.content}</h2>
           </Section>
         </>
       )}
@@ -40,58 +41,63 @@ export const AboutPageTemplate = ({ section1, section2, section3, section4, sect
       {section2 && (
         <Section className={classes.section2Container} type="secondary">
           <div className={classes.cardsContainer}>
-            {section2.cards.map((card, i) => {
-              return <Card key={i} type="highlighted" {...card} />;
-            })}
+            {section2.cards &&
+              section2.cards.map((card, i) => {
+                return <Card key={i} type="highlighted" {...card} />;
+              })}
           </div>
         </Section>
       )}
       {section3 && (
-        <Section title="apartado 3" className={classes.section3container}>
+        <Section title={section3.title} className={classes.section3container}>
           <p>{section3.subtitle}</p>
           <div className={classes.cardsContainer}>
-            {section3.cards && section3.cards.map((update, i) => {
-              return <Card key={i} type="long" {...update} />;
-            })}
+            {section3.cards &&
+              section3.cards.map((update, i) => {
+                return <Card key={i} type="long" {...update} />;
+              })}
           </div>
         </Section>
       )}
       {section4 && (
-        <Section title="apartado 4" className={classes.section4container} type="secondary">
+        <Section title={section4.title} className={classes.section4container} type="secondary">
           <div className={classes.galleryContainer}>
-            {section4.images && section4.images.map((gallery, i) => {
-              return <img key={i} src={gallery.image} alt="imagen" />;
-            })}
+            {section4.images &&
+              section4.images.map((gallery, i) => {
+                return <img key={i} src={gallery.image} alt="imagen" />;
+              })}
           </div>
         </Section>
       )}
       {section5 && (
-        <Section title="apartado 5" className={classes.section5container}>
+        <Section title={section5.title} title="apartado 5" className={classes.section5container}>
           <p>{section5.content}</p>
         </Section>
       )}
       {section6 && (
-        <Section className={classes.section6container}>
+        <Section title={section6.title} className={classes.section6container}>
           <p>{section6.title}</p>
           <div className={classes.cardsContainer}>
-            {section6.cards && section6.cards.map((card, i) => {
-              return <Card key={i} type="tertiary" {...card} />;
-            })}
+            {section6.cards &&
+              section6.cards.map((card, i) => {
+                return <Card key={i} type="tertiary" {...card} />;
+              })}
           </div>
         </Section>
       )}
       {section7 && (
-        <Section className={classes.section7container}>
+        <Section title={section7.title} className={classes.section7container}>
           <p>{section7.title}</p>
           <div className={classes.cardsContainer}>
-            {section7.cards && section7.cards.map((card, i) => {
-              return <Card key={i} type="tertiary" {...card} />;
-            })}
+            {section7.cards &&
+              section7.cards.map((card, i) => {
+                return <Card key={i} type="tertiary" {...card} />;
+              })}
           </div>
         </Section>
       )}
       {section8 && (
-        <Section title="Apartado 8" className={classes.section8container}>
+        <Section title={section8.title} className={classes.section8container}>
           <p>{section8.content}</p>
           <div className={classes.tableContainer}>
             <table>
@@ -172,6 +178,7 @@ export const aboutPageQuery = graphql`
               content
             }
             section2 {
+              title
               cards {
                 title
                 subtitle
@@ -186,11 +193,13 @@ export const aboutPageQuery = graphql`
               }
             }
             section4 {
+              title
               images {
                 image
               }
             }
             section5 {
+              title
               content
             }
             section6 {
@@ -208,6 +217,7 @@ export const aboutPageQuery = graphql`
               }
             }
             section8 {
+              title
               content
             }
           }

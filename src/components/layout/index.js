@@ -1,14 +1,14 @@
-import React from "react"
-import classes from "./layout.module.scss"
-import { Nav } from "../nav"
-import { Footer } from "../footer"
+import React from "react";
+import classes from "./layout.module.scss";
+import { Nav } from "../nav";
+import { Footer } from "../footer";
 
 export const Layout = ({ children, selected }) => {
   return (
     <div className={classes.container}>
       <Nav selected={selected} />
-      {children}
+      <div className={classes.children}>{children}</div>
       <Footer />
     </div>
-  )
-}
+  );
+};

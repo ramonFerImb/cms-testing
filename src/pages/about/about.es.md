@@ -22,9 +22,10 @@ aboutSection:
       subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       button: Más información
 section1:
-  title: Título del producto seleccionado
+  title: Apartado 1
   content: Subtítulo del producto
 section2:
+  title: Apartado 2
   cards:
     - title: Menos hardware
       subtitle: Extender la virtualización a todos los ámbitos que implican un despliegue de Datacenter (Red, Almacenamiento, Seguridad) reduce significativamente el número de equipos que deben transportarse y la logística asociada.
@@ -48,12 +49,14 @@ section3:
     - image: /img/default-fallback-image.png
       subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint Occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint Occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 section4:
+  title: Apartado 3
   images:
     - image: /img/default-fallback-image.png
     - image: /img/default-fallback-image.png
     - image: /img/default-fallback-image.png
     - image: /img/default-fallback-image.png
 section5:
+  title: Apartado 3
   content: everis Tactical HDC es un producto completo que ofrece de base las capacidades de cómputo, almacenamiento, red y seguridad de un Datacenter moderno mediante la integración de un software de virtualización que permitirá desplegar en este sistema, cualquier software estándar o aplicación propietaria que esté desarrollada sobre plataformas estándar x86.
 section6:
   title: Funciones de Almacenamiento Integradas
@@ -78,5 +81,6 @@ section7:
     - image: /img/default-fallback-image.png
       subtitle: Firewall
 section8:
+  title: Apartado 3
   content: everis Tactical HDC ofrece una serie de beneficios en escenarios de despliegue rápido que ningún otro producto del mercado es capaz de conseguir.
 ---

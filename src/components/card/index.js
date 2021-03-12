@@ -1,23 +1,15 @@
-import React from "react"
-import { getClassNames } from "../../utils/styles"
-import classes from "./card.module.scss"
-import { Button } from "./../button"
+import React from "react";
+import { getClassNames } from "../../utils/styles";
+import classes from "./card.module.scss";
+import { Button } from "./../button";
 
-export function Card({
-  title,
-  children,
-  image,
-  date,
-  subtitle,
-  button,
-  type,
-  className,
-}) {
+export function Card({ title, children, image, date, subtitle, button, type, className, id }) {
   const classMap = getClassNames({
     [classes.container]: true,
     [classes[type]]: !!type,
     [className]: !!className,
-  })
+  });
+
   return (
     <div className={classMap}>
       {image && <img className={classes.image} src={image}></img>}
@@ -25,9 +17,7 @@ export function Card({
       <div className={classes.containerData}>
         {title && <div className={classes.title}>{title}</div>}
         {date && <div className={classes.date}>{date}</div>}
-        {subtitle && (
-          <div className={classes.description}>{subtitle}</div>
-        )}
+        {subtitle && <div className={classes.description}>{subtitle}</div>}
         {button && (
           <div onClick={button.action} className={classes.button}>
             <Button type={type}>{button.text}</Button>
@@ -35,5 +25,5 @@ export function Card({
         )}
       </div>
     </div>
-  )
+  );
 }
